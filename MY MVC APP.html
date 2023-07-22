@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY MVC APP</title>
+    <script>
+      
+      let resultValue = 0; // Variable to store the result
+
+        function calculateSum() {
+            const number1 = parseFloat(document.getElementById('number1').value);
+            const number2 = parseFloat(document.getElementById('number2').value);
+            resultValue = number1 + number2; // Store the result in the variable
+            displayResult(resultValue);
+        }
+
+        function displayResult(result) {
+            document.getElementById('result').textContent = result;
+        }
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+      <li><a asp-controller="Home" asp-action="Intro">Intro</a></li>
+      <!-- Add other links here if needed -->
+    </ul>
+
+    <h3>Hemal</h3>
+
+    <!-- Other content in the body -->
+
+    <div>My Calculating system</div>
+    <!-- Other content in the body -->
+
+    <form>
+      <label for="number1">Number 1:</label>
+      <input type="number" id="number1" name="number1" />
+
+      <label for="number2">Number 2:</label>
+      <input type="number" id="number2" name="number2" />
+
+      <button type="submit" onclick="calculateSum()">Submit</button>
+
+      <p>Result: <span id="result"></span></p>
+    </form>
+
+    <p>
+      This is the custom section content that you want to display on the Intro
+      page.
+    </p>
+  </body>
+</html>
